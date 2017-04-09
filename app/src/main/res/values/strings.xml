@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Musician Hub</string>
+    
+    <string name="FCM_PREF">com.project.musicianhub.fcm_preg</string>
+    <string name="FCM_TOKEN">com.project.musicianhub.fcm_token</string>
+    
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_add_music">Add Music</string>
+    <string name="title_activity_edit_music">Edit Music</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_user_name">USERNAME</string>
+    <string name="prompt_password">PASSWORD</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">New User? Register Now</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="register_button">Register</string>
+    <string name="prompt_email">EMAIL</string>
+    <string name="prompt_confirm_password">CONFIRM PASSWORD</string>
+    <string name="prompt_name">NAME</string>
+    <string name="action_sign_out">Sign Out</string>
+    <string name="prompt_phoneno">PHONE NUMBER</string>
+    <string name="prompt_gender">GENDER</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="home_fragment">Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_fragment">Search</string>
+    <string name="notification_fragment">Notification</string>
+    <string name="profile_fragment">Profile</string>
+
+
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="action_search">Search</string>
+    <string name="prompt_search">Search Music</string>
+    <string name="prompt_music_title">TITLE</string>
+    <string name="prompt_music_genre">GENRE</string>
+    <string name="prompt_music_file_path">MUSIC</string>
+    <string name="select_music_button">SELECT MUSIC</string>
+    <string name="music_like">Like</string>
+    <string name="music_comment">Comment</string>
+    <string name="music_share">Share</string>
+    <string name="album_thumbnail">Album Art</string>
+    <string name="overflow">more</string>
+    <string name="post_title">Posts</string>
+    <string name="followers_number_title">Followers</string>
+    <string name="following_number_title">Following</string>
+    <string name="follow_user">Follow</string>
+    <string name="done">Done</string>
+    <string name="action_edit_music">Edit Music</string>
+    <string name="action_delete_music">Delete Music</string>
+    <string name="comment_message">Enter your comment here...</string>
+    <string name="title_activity_music_post">Music</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="clear_search_history">Clear History</string>
+
+    <string name="facebook_app_id">352617505134730</string>
+    <string name="no_new_notification_available">No New Notification Available</string>
+    <string name="no_home_item">No Music Post To Show</string>
+    <string name="no_music_added">No Music Added Yet</string>
+    <string name="no_search_made">No Search History</string>
+    <string name="no_comment_item">No Comment Yet</string>
+    <string name="no_follower">No Followers Yet</string>
+    <string name="no_following">Following No One Yet</string>
+    <string name="logout_button">Logout</string>
+</resources>

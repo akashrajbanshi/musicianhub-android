@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_margin="@dimen/card_margin"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/notification_user_image"
+        android:layout_width="@dimen/notification_user_resolution"
+        android:layout_height="@dimen/notification_user_resolution" />
+
+    <TextView
+        android:id="@+id/notification_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/notification_margin"
+        android:layout_toEndOf="@id/notification_user_image"
+        android:textColor="@color/album_title"
+        android:textSize="@dimen/music_style" />
+
+</RelativeLayout>

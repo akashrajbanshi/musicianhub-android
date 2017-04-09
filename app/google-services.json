@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "994515944463",
+    "firebase_url": "https://musicianhub-cd476.firebaseio.com",
+    "project_id": "musicianhub-cd476",
+    "storage_bucket": "musicianhub-cd476.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994515944463:android:55d5e19b52310bfb",
+        "android_client_info": {
+          "package_name": "com.project.musicianhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994515944463-a8en2em8ul9bj8v862o0ghi31hak24u3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGTVYa5zSbZGY9f3vLfo8tRe1b9fgUYGI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

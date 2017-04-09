@@ -1,0 +1,191 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@color/colorPrimary"
+    tools:context="com.project.musicianhub.ProfileFragment">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeProfileRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/profile_linear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_user_image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="7dp"
+                        app:civ_border_color="#fff"
+                        app:civ_border_width="3dp" />
+
+                    <TextView
+                        android:id="@+id/profile_edit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_user_image"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginStart="@dimen/edit_profile_padding"
+                        android:text="@string/title_activity_edit_profile" />
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_edit_text_view"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginStart="@dimen/edit_profile_padding"
+                        android:text="Profile"/>
+
+                    <Button
+                        android:id="@+id/follow_user_button"
+                        style="@style/button_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/profile_edit_text_view"
+                        android:layout_marginBottom="@dimen/edit_profile_padding"
+                        android:background="@drawable/button_style"
+                        android:text="@string/follow_user"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <LinearLayout
+                        android:id="@+id/post_number_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="@dimen/user_info_padding"
+                        android:layout_marginStart="@dimen/edit_profile_padding"
+                        android:layout_marginTop="@dimen/user_info_padding"
+                        android:layout_toEndOf="@+id/profile_user_image"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/post_number"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/post_number_title"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/post_title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/followers_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/user_info_padding"
+                        android:layout_marginTop="@dimen/user_info_padding"
+                        android:layout_toEndOf="@+id/post_number_linear_layout"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/followers_number"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="12" />
+
+                        <TextView
+                            android:id="@+id/followers_number_title"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/followers_number_title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/following_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/user_info_padding"
+                        android:layout_toEndOf="@+id/followers_linear_layout"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/following_number"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="23" />
+
+                        <TextView
+                            android:id="@+id/following_number_title"
+                            style="@style/loginTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/following_number_title" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/profile_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/empty_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="@string/no_music_added" />
+
+
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:clickable="true"
+            android:src="@drawable/add_music"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/profile_recycler_view"
+            app:layout_anchorGravity="bottom|right|end"
+            tools:ignore="RtlHardcoded" />
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</FrameLayout>

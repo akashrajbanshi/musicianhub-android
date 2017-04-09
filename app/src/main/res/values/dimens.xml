@@ -1,0 +1,40 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_fragment_margin">55dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_offset">10dp</dimen>
+    <dimen name="detail_backdrop_height">250dp</dimen>
+    <dimen name="backdrop_title">30dp</dimen>
+    <dimen name="backdrop_subtitle">18dp</dimen>
+    <dimen name="card_margin">7dp</dimen>
+    <dimen name="notification_margin">7dp</dimen>
+    <dimen name="card_album_radius">2dp</dimen>
+    <dimen name="album_cover_height">125dp</dimen>
+    <dimen name="music_title_padding">15dp</dimen>
+    <dimen name="music_title">20sp</dimen>
+    <dimen name="music_padding_bottom">5dp</dimen>
+    <dimen name="music_style">14sp</dimen>
+    <dimen name="ic_album_overflow_width">20dp</dimen>
+    <dimen name="ic_album_overflow_height">30dp</dimen>
+    <dimen name="ic_album_overflow_margin_top">10dp</dimen>
+    <dimen name="icon_width">35dp</dimen>
+    <dimen name="icon_height">45dp</dimen>
+    <dimen name="icon_padding">3dp</dimen>
+    <dimen name="search_album_cover_resolution">40dp</dimen>
+    <dimen name="notification_user_resolution">40dp</dimen>
+    <dimen name="activity_form_margin">30dp</dimen>
+    <dimen name="music_action_padding">12dp</dimen>
+    <dimen name="icon_text_view_padding">100dp</dimen>
+    <dimen name="music_comment_padding">15dp</dimen>
+    <dimen name="icon_text_view_end_padding">34dp</dimen>
+    <dimen name="music_share_padding">15dp</dimen>
+    <dimen name="user_info_padding">30dp</dimen>
+    <dimen name="edit_profile_padding">15dp</dimen>
+    <dimen name="like_icon_width">25dp</dimen>
+    <dimen name="like_icon_height">25dp</dimen>
+    <dimen name="small_icon_width">40dp</dimen>
+    <dimen name="small_icon_height">40dp</dimen>
+    <dimen name="user_post_margin">8dp</dimen>
+</resources>
