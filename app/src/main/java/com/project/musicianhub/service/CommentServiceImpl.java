@@ -41,15 +41,14 @@ public class CommentServiceImpl implements ICommentService {
     /**
      * Creates the comment for the music post
      *
-     * @param musicId
-     * @param userId
-     * @param comment
-     * @param commentList
-     * @param commentAdapter
-     * @param applicationContext
-     * @param emptyComment
-     *@param recyclerView @author Akash Rajbanhi
-     * @since 1.0
+     * @param musicId            music id
+     * @param userId             user id
+     * @param comment            comment object
+     * @param commentList        comment list
+     * @param commentAdapter     comment adapter
+     * @param applicationContext application context
+     * @param emptyComment       empty comment text view
+     * @param recyclerView       recycler text view
      */
     @Override
     public void createComment(final int musicId, final int userId, final int musicUserId, String comment, final List<Comment> commentList, final CommentAdapter commentAdapter, final Context applicationContext, final ProgressBar progressBar, final TextView emptyComment, final RecyclerView recyclerView) {
@@ -95,14 +94,12 @@ public class CommentServiceImpl implements ICommentService {
     /**
      * Gets all the comments for the music post
      *
-     * @param musicId
-     * @param commentList
-     * @param commentAdapter
-     * @param applicationContext
-     * @param emptyComment
-     * @param recyclerView
-     * @author Akash Rajbanshi
-     * @since 1.0
+     * @param musicId            music id
+     * @param commentList        comment list
+     * @param commentAdapter     comment adapter
+     * @param applicationContext current context
+     * @param emptyComment       emptu comment text view
+     * @param recyclerView       recycler view object
      */
     @Override
     public void getAllComments(int musicId, final List<Comment> commentList, final CommentAdapter commentAdapter, final Context applicationContext, final ProgressBar progressBar, final TextView emptyComment, final RecyclerView recyclerView) {
