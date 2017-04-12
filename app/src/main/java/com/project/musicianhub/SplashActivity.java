@@ -59,9 +59,9 @@ public class SplashActivity extends AppCompatActivity {
                     if (!session.isLoggedIn()) {
                         //go to the login activity
                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    }
-                    //if logged in go to main activity
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    } else
+                        //if logged in go to main activity
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
 
                 finish();

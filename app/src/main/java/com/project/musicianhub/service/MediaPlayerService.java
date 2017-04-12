@@ -486,10 +486,10 @@ public class MediaPlayerService extends Service implements
             handler.post(new Runnable() {
                 @Override
                 public void run() {
-                    if (artistName != null) {
+                    if (music != null) {
                         artistName.setText(music.getName());
                         titleName.setText(music.getTitle());
-                        Glide.with(getApplicationContext()).load(music.getAlbumArtPath()).diskCacheStrategy(DiskCacheStrategy.NONE).placeholder(R.drawable.logo).override(70, 70).fitCenter().into(albumArt);
+                        Glide.with(getApplicationContext()).load(music.getAlbumArtPath()).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).placeholder(R.drawable.logo).override(70, 70).fitCenter().into(albumArt);
                         Glide.with(getApplicationContext()).load(android.R.drawable.ic_media_pause).placeholder(R.drawable.logo).override(70, 70).fitCenter().into(playerStatus);
                     }
                     mediaPlayer.start();

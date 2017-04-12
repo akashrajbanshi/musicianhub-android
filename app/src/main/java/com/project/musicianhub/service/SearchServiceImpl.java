@@ -34,8 +34,8 @@ import java.util.Map;
 
 public class SearchServiceImpl implements ISearchService {
 
-    private static final String SEARCH_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/search/";
-    private static final String SEARCH_HISTORY_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
+    private static final String SEARCH_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/search/";
+    private static final String SEARCH_HISTORY_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
 
     /**
      * adds the search history to the list

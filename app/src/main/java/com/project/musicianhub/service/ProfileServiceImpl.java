@@ -52,10 +52,10 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfileServiceImpl implements IProfileService {
 
-    private static final String MUSIC_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/usermusic/";
-    private static final String USER_INFO_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
-    private static final String UPDATE_PROFILE_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/update";
-    private static final String FILE_UPLOAD_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/upload";
+    private static final String MUSIC_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/usermusic/";
+    private static final String USER_INFO_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
+    private static final String UPDATE_PROFILE_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/update";
+    private static final String FILE_UPLOAD_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/upload";
 
     List<Music> musicList;
     ProfileMusicAdapter profileMusicAdapter;
@@ -78,8 +78,8 @@ public class ProfileServiceImpl implements IProfileService {
      */
     @Override
     public void getUserInfo(int id, CircleImageView imageView, String imagePath, Context context, List<Music> musicList, ProfileMusicAdapter musicAdapter, List<TextView> textViewList, ProgressBar progressBar, String from, TextView emptyProfile, RecyclerView recyclerView) {
-        String followersUrl = "http://192.168.137.192:8080/musicianhub/webapi/users/" + id + "/follow/followers";
-        String followingUrl = "http://192.168.137.192:8080/musicianhub/webapi/users/" + id + "/follow/following";
+        String followersUrl = "http://192.168.0.13:8080/musicianhub/webapi/users/" + id + "/follow/followers";
+        String followingUrl = "http://192.168.0.13:8080/musicianhub/webapi/users/" + id + "/follow/following";
 
         getFollowAndPostNumber(followersUrl, context, textViewList.get(1), progressBar, from, emptyProfile, recyclerView);
         getFollowAndPostNumber(followingUrl, context, textViewList.get(2), progressBar, from, emptyProfile, recyclerView);
@@ -100,7 +100,7 @@ public class ProfileServiceImpl implements IProfileService {
         } else {
             String replaceSlash = imagePath.replace("\\", "/");
             imagePath = "http:" + "//" + replaceSlash;
-            Glide.with(context.getApplicationContext()).load(imagePath).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).placeholder(R.drawable.logo).override(80, 80).into(imageView);
+            Glide.with(context.getApplicationContext()).load(imagePath).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).override(80, 80).into(imageView);
         }
     }
 

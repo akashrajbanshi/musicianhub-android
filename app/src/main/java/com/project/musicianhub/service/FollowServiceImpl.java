@@ -32,7 +32,7 @@ import java.util.List;
 
 public class FollowServiceImpl implements IFollowService {
 
-    private static final String FOLLOW_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
+    private static final String FOLLOW_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
 
 
     ProfileServiceImpl profileService;
@@ -74,7 +74,7 @@ public class FollowServiceImpl implements IFollowService {
                             followButton.setBackgroundResource(R.drawable.button_style);
                             followButton.setTextColor(R.color.album_title);
                         }
-                        String url = "http://192.168.137.192:8080/musicianhub/webapi/users/" + userIdFromPost + "/follow/followers";
+                        String url = "http://192.168.0.13:8080/musicianhub/webapi/users/" + userIdFromPost + "/follow/followers";
                         profileService = new ProfileServiceImpl();
                         profileService.getFollowAndPostNumber(url, context, followersTextView, null, "", null, null);
 
@@ -129,7 +129,7 @@ public class FollowServiceImpl implements IFollowService {
                                 followButton.setTextColor(R.color.album_title);
                             }
 
-                            String url = "http://192.168.137.192:8080/musicianhub/webapi/users/" + userIdFromPost + "/follow/followers";
+                            String url = "http://192.168.0.13:8080/musicianhub/webapi/users/" + userIdFromPost + "/follow/followers";
                             profileService = new ProfileServiceImpl();
                             profileService.getFollowAndPostNumber(url, context, followerTxtView, null, "", null, null);
 
@@ -162,7 +162,7 @@ public class FollowServiceImpl implements IFollowService {
      */
     public void getAllFollowers(int id, final List<Follow> followList, final FollowAdapter followAdapter, final Context context, final TextView emptyFollower, final RecyclerView recyclerView) {
         //gets the RestAPI url for the getting all the followers
-        String followersUrl = "http://192.168.137.192:8080/musicianhub/webapi/users/" + id + "/follow/followers";
+        String followersUrl = "http://192.168.0.13:8080/musicianhub/webapi/users/" + id + "/follow/followers";
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, followersUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -227,7 +227,7 @@ public class FollowServiceImpl implements IFollowService {
      */
     public void getAllFollowing(int id, final List<Follow> followList, final FollowAdapter followAdapter, final Context context, final TextView emptyFollowing, final RecyclerView recyclerView) {
         //gets the RestAPI url for the getting all the followers
-        String followersUrl = "http://192.168.137.192:8080/musicianhub/webapi/users/" + id + "/follow/following";
+        String followersUrl = "http://192.168.0.13:8080/musicianhub/webapi/users/" + id + "/follow/following";
         final StringRequest stringRequest = new StringRequest(Request.Method.GET, followersUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

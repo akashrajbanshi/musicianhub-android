@@ -32,6 +32,8 @@ import java.util.List;
  * @since 1.0
  */
 public class HomeFragment extends Fragment implements MusicAdapter.OnLoadMoreListener {
+    //session
+    SessionManager session;
     //recyclerView inside home fragment
     RecyclerView recyclerView;
     //floating action button of the home view
@@ -42,6 +44,8 @@ public class HomeFragment extends Fragment implements MusicAdapter.OnLoadMoreLis
     private List<Music> musicList;
     //user id
     int id;
+    //user image path
+    String imagePath;
     //service for music
     MusicServiceImpl musicService;
     //swipe refresh layout
@@ -60,6 +64,18 @@ public class HomeFragment extends Fragment implements MusicAdapter.OnLoadMoreLis
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
         musicService = new MusicServiceImpl();
+
+        //initializes the session and gets the session data
+        session = new SessionManager(getActivity().getApplicationContext());
+        HashMap<String, Integer> userId = session.getUserDetails();
+        HashMap<String, String> userImage = session.getUserPathDetails();
+        HashMap<String, String> username = session.getUsernameDetails();
+        final int id = userId.get(SessionManager.KEY_ID);
+        final String imagePath = userImage.get(SessionManager.KEY_USER_IMAGE);
+        final String userName = username.get(SessionManager.KEY_USERNAME);
+        this.id = id;
+        this.imagePath = imagePath;
+
         //UI initialization
         emptyHome = (TextView) view.findViewById(R.id.empty_home);
         floatingActionButton = (FloatingActionButton) view.findViewById(R.id.fab);
@@ -67,6 +83,8 @@ public class HomeFragment extends Fragment implements MusicAdapter.OnLoadMoreLis
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(view.getContext(), AddMusicActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("userId", id);
                 view.getContext().startActivity(intent);
             }
         });

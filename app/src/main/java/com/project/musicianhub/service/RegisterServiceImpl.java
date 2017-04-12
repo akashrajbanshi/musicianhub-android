@@ -40,8 +40,8 @@ import java.io.UnsupportedEncodingException;
 
 public class RegisterServiceImpl implements IRegisterService {
 
-    private static final String REG_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/create";
-    private static final String FILE_UPLOAD_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/upload";
+    private static final String REG_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/create";
+    private static final String FILE_UPLOAD_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/upload";
 
     /**
      * creates the user

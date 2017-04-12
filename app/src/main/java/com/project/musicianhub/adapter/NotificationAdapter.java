@@ -135,7 +135,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         if (notification.getImagePath().equals("")) {
             Glide.with(mContext).load(R.drawable.user).placeholder(R.drawable.logo).override(125, 125).into(holder.thumbnail);
         } else {
-            Glide.with(mContext).load(notification.getImagePath()).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).placeholder(R.drawable.logo).override(125, 125).into(holder.thumbnail);
+            Glide.with(mContext).load(notification.getImagePath()).skipMemoryCache(true).diskCacheStrategy(DiskCacheStrategy.NONE).override(125, 125).into(holder.thumbnail);
         }
 
 

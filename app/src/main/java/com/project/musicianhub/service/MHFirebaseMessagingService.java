@@ -76,7 +76,7 @@ public class MHFirebaseMessagingService extends FirebaseMessagingService {
                     LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
                     // app is in background, show the notification in notification tray
                     Intent resultIntent = new Intent(getApplicationContext(), MusicPostActivity.class);
-                    resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                     resultIntent.putExtra("musicId", musicId);
                     showNotificationMessage(getApplicationContext(), title, message, resultIntent, userImagePath);
                 } else {
@@ -91,7 +91,7 @@ public class MHFirebaseMessagingService extends FirebaseMessagingService {
                     LocalBroadcastManager.getInstance(this).sendBroadcast(pushNotification);
                     // app is in background, show the notification in notification tray
                     Intent resultIntent = new Intent(getApplicationContext(), MusicPostActivity.class);
-                    resultIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
                     resultIntent.putExtra("musicId", musicId);
                     showNotificationMessage(getApplicationContext(), title, message, resultIntent, userImagePath);
 

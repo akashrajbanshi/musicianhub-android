@@ -31,8 +31,8 @@ import org.json.JSONObject;
 
 public class LoginServiceImpl implements ILoginService {
 
-    private static final String LOGIN_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/login";
-    private static final String REGISTER_TOKEN_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
+    private static final String LOGIN_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/login";
+    private static final String REGISTER_TOKEN_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
 
     /**
      * Identifies the user credentials for the login using usernamme and password

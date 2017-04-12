@@ -22,6 +22,7 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.project.musicianhub.MusicPostActivity;
 import com.project.musicianhub.ProfileFragment;
 import com.project.musicianhub.R;
@@ -65,13 +66,13 @@ public class MusicServiceImpl implements IMusicService {
     String imagePath;
     String musicPath;
 
-    private static final String IMAGE_FILE_UPLOAD_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/uploadUserImage";
-    private static final String MUSIC_FILE_UPLOAD_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/uploadUserMusic";
-    private static final String ADD_MUSIC_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/create";
-    private static final String UPDATE_MUSIC_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/update";
-    private static final String DELETE_MUSIC_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/delete/";
-    private static final String MUSIC_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/";
-    private static final String NOTIFICATION_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
+    private static final String IMAGE_FILE_UPLOAD_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/uploadUserImage";
+    private static final String MUSIC_FILE_UPLOAD_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/uploadUserMusic";
+    private static final String ADD_MUSIC_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/create";
+    private static final String UPDATE_MUSIC_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/update";
+    private static final String DELETE_MUSIC_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/delete/";
+    private static final String MUSIC_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/";
+    private static final String NOTIFICATION_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
 
 
     NotificationServiceImpl notificationService;
@@ -461,7 +462,7 @@ public class MusicServiceImpl implements IMusicService {
         if (strings.get(2).equals("")) {
             Glide.with(context.getApplicationContext()).load(R.drawable.logo).placeholder(R.drawable.logo).override(128, 128).into(imageView);
         } else {
-            Glide.with(context.getApplicationContext()).load(strings.get(2)).override(128, 128).into(imageView);
+            Glide.with(context.getApplicationContext()).load(strings.get(2)).diskCacheStrategy(DiskCacheStrategy.NONE).override(128, 128).into(imageView);
         }
         //sets the edit text value
         editTextList.get(0).setText(String.valueOf(id));

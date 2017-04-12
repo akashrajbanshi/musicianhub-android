@@ -33,8 +33,8 @@ import java.util.List;
 public class CommentServiceImpl implements ICommentService {
 
 
-    private static final String COMMENT_URL = "http://192.168.137.192:8080/musicianhub/webapi/music/";
-    private static final String NOTIFICATION_URL = "http://192.168.137.192:8080/musicianhub/webapi/users/";
+    private static final String COMMENT_URL = "http://192.168.0.13:8080/musicianhub/webapi/music/";
+    private static final String NOTIFICATION_URL = "http://192.168.0.13:8080/musicianhub/webapi/users/";
 
     NotificationServiceImpl notificationService;
 
